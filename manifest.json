@@ -1,0 +1,24 @@
+{
+    "name": "Chrome Workflow Extension",
+    "description": "Workflow automation extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": "hello_extensions.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "unlimitedStorage"
+    ],
+    "host_permissions": [
+        "https://api.notion.com/*"
+    ],
+    "background": {
+        "service_worker": "src/background/background.ts",
+        "type": "module"
+    }
+
+
+}
