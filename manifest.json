@@ -5,7 +5,12 @@
     "manifest_version": 3,
     "action": {
       "default_popup": "src/popup/popup.html",
-      "default_icon": "images/hello_extensions.png"
+      "default_icon": {
+        "16": "images/hello_extensions.png",
+        "32": "images/hello_extensions.png",
+        "48": "images/hello_extensions.png",
+        "128": "images/hello_extensions.png"
+      }
     },
     "permissions": [
         "storage",
