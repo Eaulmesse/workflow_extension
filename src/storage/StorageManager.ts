@@ -148,4 +148,24 @@ export class StorageManager {
             return undefined;
         }
     }
+
+    async deleteWorkflow(id: string) : Promise<void> {
+        try {
+            if (!await this.exists('workflows', id)) {
+                throw new Error('Workflow not found');
+            }
+
+            await this.remove('workflows', id);
+
+            const actions = await this.getAll('actions');
+            for (const action of Object.values(actions)) {
+                if (action['workflowId'] === id) {
+                    await this.remove('actions', action['id']);
+                }
+            }
+        } catch (error) {
+            console.error('Error deleting workflow in StorageManager:', error);
+            throw error;
+        }
+    }
 }
