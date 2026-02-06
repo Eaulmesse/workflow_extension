@@ -39,6 +39,8 @@ export class StorageManager {
             this.actions = Array.isArray(data['actions']) ? data['actions'] : [];
             this.integrations = Array.isArray(data['integrations']) ? data['integrations'] : [];
             this.logs = Array.isArray(data['logs']) ? data['logs'] : [];
+
+            console.log('StorageManager initialized');
         } catch (error) {
             console.error('Error initializing StorageManager:', error);
             throw error;

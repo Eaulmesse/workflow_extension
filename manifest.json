@@ -6,10 +6,10 @@
     "action": {
       "default_popup": "src/popup/popup.html",
       "default_icon": {
-        "16": "images/hello_extensions.png",
-        "32": "images/hello_extensions.png",
-        "48": "images/hello_extensions.png",
-        "128": "images/hello_extensions.png"
+        "16": "hello_extensions.png",
+        "32": "hello_extensions.png",
+        "48": "hello_extensions.png",
+        "128": "hello_extensions.png"
       }
     },
     "permissions": [

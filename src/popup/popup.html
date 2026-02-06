@@ -9,10 +9,13 @@
       padding: 10px;
     }
   </style>
+  <script type="module" src="./popup.ts"></script>
 </head>
 <body>
   <h1>Workflows</h1>
-  <div id="app"></div>
+  <input type="text" id="workflow-name" placeholder="Nom du workflow">
+  <button id="create-workflow-btn">Créer un workflow</button>
+  <ul id="workflow-list"></ul>
   
 </body>
 </html>

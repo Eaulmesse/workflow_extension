@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "esModuleInterop": true,
-        "target": "es6",
+        "target": "es2017",
         "sourceMap": true,
         "outDir": "dist"
     },
@@ -11,4 +11,5 @@
     "exclude": ["node_modules", "dist"],
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "types": ["chrome", "node"]
+    
 }

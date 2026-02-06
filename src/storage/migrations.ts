@@ -1,6 +1,6 @@
 const CURRENT_VERSION: number = 1;
 
-async function initializeStorage(): Promise<void> {
+export async function initializeStorage(): Promise<void> {
     try {
         await chrome.storage.local.set({
             workflows: {},
@@ -17,7 +17,7 @@ async function initializeStorage(): Promise<void> {
     }
 }
 
-async function migrateStorage(): Promise<void> {
+export async function migrateStorage(): Promise<void> {
     try {
         const { app_initialized } = await chrome.storage.local.get('app_initialized');
 
